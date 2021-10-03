@@ -11,34 +11,33 @@ const Home = (props) => {
                 <div id="header">
 
                 </div>
-                <button className='btn' >Logout</button>
+                <button className='btnHome' onClick={props.logout_func}>Logout</button>
             </nav>
             <div className="mainContainer">
                 <h1 className="h1-hero">Public Holidays</h1>
                 <div className="text-hero">Retrieve public holidays for 2 countries worldwide and for any specific year.</div>
-                <div className="container card">
+                <div className="containerHolder card">
                     <div className="select">
-                        <select>
-                            <option>Countries</option>      
+                        <select className="form-control" onChange={(event) => props.handleChange({ "field": "country", "value": event.target.value })}>
+                            <option>Countries</option>
                             <option value="DE">Germany</option>
                             <option value="GH">Ghana</option>
                         </select>
                     </div>
                     <div className="select">
-                        <select>
+                        <select className="form-control" onChange={(event) => props.handleChange({ "field": "year", "value": event.target.value })}>
                             <option>Year</option>
                             <option value="2020">2020</option>
                             <option value="2021">2021</option>
                             <option value="2022">2022</option>
                             <option value="2023">2023</option>
                             <option value="2024">2024</option>
-                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div className="select">
-                        <select>
+                        <select className="form-control" onChange={(event) => props.handleChange({ "field": "month", "value": event.target.value })}>
                             <option>Month</option>
-                            <option value="13">Any Month</option>
+                            <option value="any">Any Month</option>
                             <option value="1">January</option>
                             <option value="2">February</option>
                             <option value="3">March</option>
@@ -54,9 +53,9 @@ const Home = (props) => {
                         </select>
                     </div>
                     <div className="select">
-                        <select>
+                        <select className="form-control" onChange={(event) => props.handleChange({ "field": "day", "value": event.target.value })}>
                             <option>Day</option>
-                            <option value="">Any</option>
+                            <option value="any">Any Day</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -90,16 +89,29 @@ const Home = (props) => {
                             <option value="31">31</option>
                         </select>
                     </div>
-                    <button>Holiday!</button>
+                   
+                    <button className='btnHome' onClick={props.holiday}>Test</button>
                 </div>
-                <div className="container card">
+                <div className="containerHolder card">
                     <div className="insideContainer">
-                        {/* <h2>Name: </h2>
-                        <h2>Country: </h2>
-                        <h2>Country: </h2>
-                        <h2>Date: </h2>
-                        <h2>Type: </h2>
-                        <h2>Week_Day: </h2> */}
+                    <br />
+                    {
+                            props.holidays ?
+                                props.holidays.map((data, i) => {
+                                    return (
+                                        <span key={i}>
+                                            <h2 className='data'>Name: {data.name}</h2>
+                                            <h2 className='data'>Country: {data.country}</h2>
+                                            <h2 className='data'>Location: {data.location}</h2>
+                                            <h2 className='data'>Date: {data.date}</h2>
+                                            <h2 className='data'>Type: {data.type}</h2>
+                                            <h2 className='data'>Week_Day: {data.week_day}</h2>
+                                            <br /><br />
+                                        </span>
+                                    );
+                                })
+                                : null
+                        }
                     </div>
                 </div>
             </div>

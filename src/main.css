@@ -1,3 +1,9 @@
+:root {
+  --gray: #000;
+  --darkgray: #f3f3f3;
+  --first-color:#3498db;
+}
+
 body{
     margin: 0;
     min-height: 100%;
@@ -8,22 +14,12 @@ body{
     line-height: 20px;
   
 }
-.app-body{
+ .app-body{
     background-color: #f9fafb;
 }
 
-*{
-    box-sizing: border-box;
-}
-
-:root {
-    --gray: #000;
-    --darkgray: #f3f3f3;
-    --first-color:#0b3b69;
-  }
-
   nav{
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(120deg, #3498db, #8e44ad);
     width: 100%;
     padding: 20px 40px;
     display: flex;
@@ -36,6 +32,11 @@ body{
   .mainContainer{
       text-align: center;
       justify-content: center;
+  }
+   h2.data{
+    font-size: 2em;
+    font-family: "Special Elite", cursive;
+    padding: 1rem;
   }
 
   .h1-hero {
@@ -75,6 +76,7 @@ body{
     height: 3em;
     border-radius: .25em;
     overflow: hidden;
+    margin-right: 0.5rem;
   }
  
   .select::after {
@@ -103,10 +105,10 @@ body{
     text-decoration: none;
     padding: .25em;
     border-radius: .25em;
-    background: white;
+    
   }
 
-  button{
+.btnHome{
     padding: 1rem;
     background-color: var(--first-color);
     color: #FFF;
@@ -116,12 +118,12 @@ body{
     transition: .3s;
   }
 
-.container.card{
+.containerHolder.card{
     position: relative;
     margin-bottom: 50px;
     padding: 15px;
 }
-.container{
+.containerHolder{
     display: block;
     padding: 30px;
     border-radius: 20px;
@@ -147,11 +149,11 @@ body{
   ::-webkit-scrollbar-thumb {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    
   }
 
   footer{
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(120deg, #3498db, #8e44ad);
     padding: 20px;
     display: flex;
     align-items: center;
