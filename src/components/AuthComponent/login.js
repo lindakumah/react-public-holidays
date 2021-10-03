@@ -16,15 +16,15 @@ const Login = (props) => {
                     <input type="password" placeholder='Password' onChange={(event) => props.handleChange({"field": "password", "value": event.target.value})}/>              
                 </div>
 
-                <button className="logbtn" onClick={props.login_func}>LOGIN</button>
+                <button className="logbtn" onClick={props.login_func}>LOG IN</button>
 
                 <div className="forgt-btn">
-                    <Link to='/forget-password'><h4>Forgot Password</h4></Link>
+                    <Link to='/forget-password'><h4>Forgotten Password?</h4></Link>
 
                 </div>
 
                 <div className="bottom-text">
-                    Don't have account? <Link to="/sign-up"> Sign up</Link>
+                    Don't have an account? <Link to="/sign-up"> Sign up</Link>
 
                 </div>
 

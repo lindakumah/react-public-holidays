@@ -15,7 +15,7 @@ const Home = (props) => {
             </nav>
             <div className="mainContainer">
                 <h1 className="h1-hero">Public Holidays</h1>
-                <div className="text-hero">Retrieve public holidays for 2 countries worldwide and for any specific year.</div>
+                <div className="text-hero">Retrieve Public Holidays for Ghana and Germany for any specific year.</div>
                 <div className="containerHolder card">
                     <div className="select">
                         <select className="form-control" onChange={(event) => props.handleChange({ "field": "country", "value": event.target.value })}>

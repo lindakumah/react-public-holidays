@@ -9,7 +9,7 @@ const ForgetPassword = (props) => {
     return (
         <section>
             <form action="#" className="login-form">
-                <h1 className="forgt-text">Forgot Password</h1>
+                <h1 className="forgt-text">Reset Password</h1>
 
                 <div className="txtb">
                     <input type="text" placeholder='Email' onChange={(event) => props.handleChange({ "field": "email", "value": event.target.value })} />

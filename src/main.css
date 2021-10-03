@@ -1,163 +1,178 @@
-:root {
-  --gray: #000;
-  --darkgray: #f3f3f3;
-  --first-color:#3498db;
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff;
+  font-family: Arial,'Helvetica Neue',Helvetica,sans-serif;
+  color: #1b1643;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-body{
-    margin: 0;
-    min-height: 100%;
-    background-color: #fff;
-    font-family: Arial,'Helvetica Neue',Helvetica,sans-serif;
-    color: #1b1643;
-    font-size: 14px;
-    line-height: 20px;
-  
-}
- .app-body{
-    background-color: #f9fafb;
+.app-body {
+  background-color: #f9fafb;
 }
 
-  nav{
-    background: linear-gradient(120deg, #3498db, #8e44ad);
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-    
-  
-
-  .mainContainer{
-      text-align: center;
-      justify-content: center;
-  }
-   h2.data{
-    font-size: 2em;
-    font-family: "Special Elite", cursive;
-    padding: 1rem;
-  }
-
-  .h1-hero {
-    margin-top: 100px;
-    color: #1b1643;
+nav {
+  background: linear-gradient(120deg, #3498db, #8e44ad);
+  width: 100%;
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-  .text-hero {
-    margin-top: 10px;
-    margin-bottom: 50px;
-    color: #575a7b;
-    font-size: 16px;
-    line-height: 26px;
-}
-  
-  select {
-    appearance: none;
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-    flex: 1;
-    padding: 0 1em;
-    color: #000;
-    background-color: var(--darkgray);
-    background-image: none;
-    cursor: pointer;
-  }
-  
-  select::-ms-expand {
-    display: none;
-  }
-  
-  .select {
-    position: relative;
-    display: inline-flex;
-    width: 12em;
-    height: 3em;
-    border-radius: .25em;
-    overflow: hidden;
-    margin-right: 0.5rem;
-  }
- 
-  .select::after {
-    content: '\25BC';
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1em;
-    background-color: #f3f3f3;
-    transition: .25s all ease;
-    pointer-events: none;
-  }
-  
-  .select:hover::after {
-    color: #f39c12;
-  }
-  
- 
-  h1 {
-    margin: 0 0 0.25em;
-  }
-
-  a {
-    font-weight: bold;
-    color: var(--gray);
-    text-decoration: none;
-    padding: .25em;
-    border-radius: .25em;
-    
-  }
-
-.btnHome{
-    padding: 1rem;
-    background-color: var(--first-color);
-    color: #FFF;
-    font-weight: 600;
-    text-align: center;
-    border-radius: .5rem;
-    transition: .3s;
-  }
-
-.containerHolder.card{
-    position: relative;
-    margin-bottom: 50px;
-    padding: 15px;
-}
-.containerHolder{
-    display: block;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: #fff;
-    box-shadow: 0 44px 74px 0 rgb(27 22 66 / 6%), 0 0 24px 0 rgb(27 22 66 / 4%);
-    width: 50%;
-    margin: auto;
+nav .btnHome {
+  padding: 1rem;
+  background-color: #3498db;
+  color: #FFF;
+  font-weight: 600;
+  text-align: center;
+  border-radius: .5rem;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-.insideContainer{
-    overflow: scroll;
-    height: 360px;
-    border-radius: 6px;
-    background-color: #f6f5f9;
-    font-size: 12px;
-    line-height: 18px;
+.mainContainer {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
+.mainContainer .h1-hero {
+  margin-top: 100px;
+  color: #1b1643;
+}
+
+.mainContainer .text-hero {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color: #575a7b;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.mainContainer .containerHolder {
+  display: block;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 44px 74px 0 #d7d9db, 0 0 24px 0 #f9fafb;
+          box-shadow: 0 44px 74px 0 #d7d9db, 0 0 24px 0 #f9fafb;
+  width: 50%;
+  margin: auto;
+}
+
+.mainContainer .containerHolder .select {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 12em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  margin-right: 0.5rem;
+}
+
+.mainContainer .containerHolder .select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #f3f3f3;
+  -webkit-transition: .25s all ease;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+
+.mainContainer .containerHolder .select:hover::after {
+  color: #f39c12;
+}
+
+.mainContainer .containerHolder select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 1em;
+  color: #000;
+  background-color: #f3f3f3;
+  background-image: none;
+  cursor: pointer;
+}
+
+.mainContainer .containerHolder.card {
+  position: relative;
+  margin-bottom: 50px;
+  padding: 15px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.containerHolder .btnHome {
+  padding: 1rem;
+  background-color: #3498db;
+  color: #FFF;
+  font-weight: 600;
+  text-align: center;
+  border-radius: .5rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.containerHolder .insideContainer {
+  overflow: scroll;
+  height: 360px;
+  border-radius: 6px;
+  background-color: #f6f5f9;
+  font-size: 12px;
+  line-height: 18px;
+}
+
 ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 7px;
-  }
+  -webkit-appearance: none;
+  width: 7px;
+}
 
-  ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, .5);
-    
-  }
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-  footer{
-    background: linear-gradient(120deg, #3498db, #8e44ad);
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-weight: 300;
-    color: #fff;
-  }
+h1 {
+  margin: 0 0 0.25em;
+}
+
+footer {
+  background: linear-gradient(120deg, #3498db, #8e44ad);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 300;
+  color: #fff;
+}
+/*# sourceMappingURL=main.css.map */
