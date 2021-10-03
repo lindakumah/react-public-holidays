@@ -26,7 +26,7 @@ const Signup = (props) => {
 
                 <button className="logbtn" onClick={props.signup_func}>REGISTER</button>
 
-                <div className="bottom-text"> Allready Have Account?
+                <div className="bottom-text"> Already Have Account?
                 <Link to="/">Login</Link>
                 </div>
 
