@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Login from './Login'
+import Login from './login'
 import { connect } from 'react-redux'
 import { serverLogin } from './../../actions/AuthAction';
 
