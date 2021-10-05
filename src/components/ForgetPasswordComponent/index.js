@@ -25,11 +25,11 @@ class ForgetPasswordContainer extends Component {
     }
 
     doReset = () => {
-        let obj = {
-            password1: this.state.password1,
-            password2: this.state.password2,
-            email: this.state.email
-        }
+        // let obj = {
+        //     password1: this.state.password1,
+        //     password2: this.state.password2,
+        //     email: this.state.email
+        // }
 
         if (this.state.password1 !== this.state.password2) {
             alert("Passwords must match");
